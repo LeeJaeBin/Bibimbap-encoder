@@ -1,0 +1,46 @@
+.input{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.submit{ 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+    border: none;
+    border-radius: 5px; 
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    background-color: gray;
+    font-size: 17px;
+}
+
+.output{
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+    font-size: 18px;
+    height: 13%;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.title{
+    text-align: center;
+}
+
+.image{
+    border-radius: 7px;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
