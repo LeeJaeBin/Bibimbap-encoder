@@ -57,6 +57,57 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="bibim.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js" ></script>
+        <script>
+            var count=0;
+            var mov_count=0;
+            var mov_ck=0;
+            var mov_den=0;
+            function click_count(){
+                 count++;
+                 if(count==10){
+                     moving_bb();
+                     jQuery('.icon').show();
+                     count=0;
+                     mov_count++;
+                 }
+                 if(mov_count==5){
+                     mov_ck++;  
+                 }
+                 if(mov_ck==5){
+                     mov_den=1;
+                 }
+            }
+            function moving_bb(){
+                $('.icon').animate({
+                    left:1700
+                },5000); 
+                $('.icon').animate({
+                    left:0
+                },5000);
+                if(mov_ck>=1){
+                    jQuery('.icon_kc').show();
+                    $('.icon_kc').animate({
+                        top:1500
+                    },5000);
+                    $('.icon_kc').animate({
+                        top:0
+                    },5000);
+                }
+                if(mov_den==1){
+                    jQuery('.icon_den').show();
+                    $('.icon_den').animate({
+                        top:1500
+                    },5000);
+                    $('.icon_den').animate({
+                        top:0
+                    },5000);
+                }
+            }
+            function disable(){
+                jQuery('.icon').hide();  
+            }
+        </script>
     </head>
     <body>
         <h1 class="title">Bibimbap encoder</h1>
@@ -64,7 +115,10 @@
             <input name="input" class="input"> 
             <input type="submit" class="submit" value="Encode">
         </form>
-        <img src="bibim.jpg" class="image">
+        <img src="bibim.jpg" class="image" onclick="click_count()">
+        <img src="icon.png" class="icon" onclick="disable()">
+        <img src="kimchi.png" class="icon_kc" onclick="disable()">
+        <img src="denjang.png" class="icon_den" onclick="disable()">
         <textarea type="text" class="output" readonly>
         <?php
             for($i=0;$i<$j_cnt;$i++){

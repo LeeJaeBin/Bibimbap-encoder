@@ -44,3 +44,25 @@
     display: block;
     width: 50%;
 }
+
+.icon{
+    position : absolute;
+    margin-top: -350px;
+    width: 10%;
+    display: none;
+}
+
+.icon_kc{
+    position : absolute;
+    margin-top: -800px;
+    width: 10%;
+    display: none;
+}
+
+.icon_den{
+    position : absolute;
+    margin-top: -800px;
+    width: 10%;
+    margin-left: 1700px;
+    display: none;
+}
